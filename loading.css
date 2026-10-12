@@ -2,13 +2,7 @@
   min-height:100dvh;
   display:grid;
   grid-template-rows:auto 1fr auto;
-  padding:32px var(--gutter);
-}
-.loader-brand {
-  font-family:"Space Grotesk",Arial,sans-serif;
-  font-weight:700;
-  font-size:36px;
-  letter-spacing:-.065em;
+  padding:0 0 32px;
 }
 .loader-center {
   display:flex;
@@ -36,7 +30,7 @@
   animation:loader-spin .8s linear infinite;
 }
 .loader-bottom {
-  width:100%;
+  width:calc(100% - 2 * var(--gutter));
   max-width:1472px;
   justify-self:center;
   padding-bottom:max(8px,env(safe-area-inset-bottom));
@@ -91,7 +85,6 @@
 }
 @media(max-width:520px) {
   .connection-loader {
-    padding-top:22px;
     padding-bottom:24px;
   }
   .loader-message {

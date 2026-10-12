@@ -11,31 +11,6 @@ header,main,footer {
   max-width:1600px;
   margin-inline:auto;
 }
-header {
-  min-height:88px;
-  padding:16px var(--gutter);
-  display:grid;
-  grid-template-columns:1fr auto 1fr;
-  align-items:center;
-  gap:16px;
-  border-bottom:1px solid var(--line);
-}
-.wordmark {
-  justify-self:start;
-  font-family:"Space Grotesk",Arial,sans-serif;
-  font-synthesis:none;
-  font-weight:700;
-  font-size:43px;
-  letter-spacing:-5px;
-  line-height:1;
-}
-.wordmark span {
-  font-size:20px;
-  vertical-align:top;
-  display:inline-block;
-  margin:5px 0 0 5px;
-  letter-spacing:0;
-}
 .header-label {
   text-align:center;
 }
@@ -238,20 +213,9 @@ footer>span:last-child span {
   }
 }
 @media(max-width:520px) {
-  header {
-    min-height:72px;
-    gap:8px;
-  }
   .header-label {
     font-size:8px;
     letter-spacing:.025em;
-  }
-  .wordmark {
-    font-size:34px;
-  }
-  .wordmark span {
-    font-size:17px;
-    margin-top:3px;
   }
   .theme {
     font-size:8px;
