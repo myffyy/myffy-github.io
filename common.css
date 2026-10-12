@@ -1,0 +1,53 @@
+@font-face {
+  font-family:Local;
+  src:local("Helvetica Neue");
+}
+@font-face {
+  font-family:"Space Grotesk";
+  src:url("fonts/SpaceGrotesk-Variable.ttf") format("truetype");
+  font-style:normal;
+  font-weight:300 700;
+  font-display:swap;
+}
+* {
+  box-sizing:border-box;
+}
+:root {
+  --bg:#e8e7e2;
+  --ink:#22231f;
+  --line:#b5b5ad;
+  --soft:#66685e;
+  --gutter:clamp(20px,4vw,64px);
+}
+body {
+  margin:0;
+  background:var(--bg);
+  color:var(--ink);
+  font-family:Local,Arial,sans-serif;
+  transition:background .3s,color .3s;
+}
+:root.dark {
+  --bg:#22231f;
+  --ink:#e8e7e2;
+  --line:#5d5f54;
+  --soft:#bbbdb0;
+}
+a {
+  color:inherit;
+  text-decoration:none;
+}
+button {
+  font:inherit;
+  color:inherit;
+  cursor:pointer;
+}
+button:focus-visible,a:focus-visible {
+  outline:3px solid var(--ink);
+  outline-offset:6px;
+}
+.micro {
+  font-family:"Courier New",monospace;
+  font-size:10px;
+  line-height:1.5;
+  letter-spacing:.08em;
+}

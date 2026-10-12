@@ -1,0 +1,104 @@
+.connection-loader {
+  min-height:100dvh;
+  display:grid;
+  grid-template-rows:auto 1fr auto;
+  padding:32px var(--gutter);
+}
+.loader-brand {
+  font-family:"Space Grotesk",Arial,sans-serif;
+  font-weight:700;
+  font-size:36px;
+  letter-spacing:-.065em;
+}
+.loader-center {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  gap:24px;
+}
+.loader-message {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:18px;
+  font-family:"Courier New",monospace;
+  font-size:clamp(13px,1.6vw,20px);
+  letter-spacing:.06em;
+}
+.loader-spinner {
+  width:22px;
+  height:22px;
+  flex-shrink:0;
+  border:2px solid var(--line);
+  border-top-color:var(--ink);
+  border-radius:50%;
+  animation:loader-spin .8s linear infinite;
+}
+.loader-bottom {
+  width:100%;
+  max-width:1472px;
+  justify-self:center;
+  padding-bottom:max(8px,env(safe-area-inset-bottom));
+}
+.loader-meta {
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+  margin-bottom:14px;
+}
+.loader-track {
+  height:3px;
+  background:var(--line);
+  overflow:hidden;
+}
+.loader-fill {
+  width:100%;
+  height:100%;
+  background:var(--ink);
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform .16s linear;
+}
+.loader-continue {
+  text-decoration:underline;
+  text-underline-offset:4px;
+}
+.is-running .loader-continue,.is-embedded .loader-continue {
+  display:none;
+}
+@keyframes loader-spin {
+  to {
+    transform:rotate(360deg);
+  }
+}
+.is-connected .loader-spinner {
+  animation:none;
+  border:0;
+  border-radius:0;
+  position:relative;
+}
+.is-connected .loader-spinner::after {
+  content:"";
+  position:absolute;
+  left:25%;
+  top:10%;
+  width:35%;
+  height:65%;
+  border-right:2px solid #48c774;
+  border-bottom:2px solid #48c774;
+  transform:rotate(45deg);
+}
+@media(max-width:520px) {
+  .connection-loader {
+    padding-top:22px;
+    padding-bottom:24px;
+  }
+  .loader-message {
+    gap:12px;
+  }
+  .loader-spinner {
+    width:18px;
+    height:18px;
+  }
+}
