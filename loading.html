@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e8e7e2">
+  <title>myffy — connecting</title>
+  <link rel="preload" href="fonts/SpaceGrotesk-Variable.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="preload" href="images/avatar.png" as="image">
+  <link rel="stylesheet" href="common.css">
+  <link rel="stylesheet" href="loading.css">
+  <script src="theme.js"></script>
+  <script src="loading.js" defer></script>
+</head>
+<body>
+  <main class="connection-loader" id="connection-loader" aria-label="Loading personal space">
+    <span class="loader-brand" aria-hidden="true">m✳</span>
+    <div class="loader-center">
+      <div class="loader-message" role="status">
+        <span class="loader-spinner" aria-hidden="true"></span>
+        <span id="loader-message">TRYING TO CONNECT…</span>
+      </div>
+      <a class="loader-continue micro" href="index.html">OPEN PERSONAL SPACE</a>
+    </div>
+    <div class="loader-bottom">
+      <div class="loader-meta micro">
+        <span>PERSONAL SPACE / 001</span>
+        <span id="loader-percent" aria-hidden="true">0%</span>
+      </div>
+      <div class="loader-track" id="loader-progress" role="progressbar" aria-label="Page loading" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+        <div class="loader-fill" id="loader-fill"></div>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
