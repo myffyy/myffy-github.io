@@ -95,3 +95,7 @@
     height:18px;
   }
 }
+
+.connection-loader .site-header {
+  border-bottom-color:transparent;
+}
