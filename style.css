@@ -313,7 +313,7 @@ html.is-loading {
 html.is-loading body > header,
 html.is-loading body > main,
 html.is-loading body > footer {
-  visibility: hidden;
+  display: none;
 }
 .is-loading .loading-frame {
   display: block;
